@@ -10,7 +10,7 @@ In this assignment, I tested the many time-series tools that I have learned in o
 - - -
 
 ## 1 - Time-Series Forecasting
-![Time-Series Forecasting](https://github.com/arzuisiktopbas/python-homework/blob/main/Homework%237/Images/Yen_Future_Settle_Prices.png)
+![Time-Series Forecasting](https://github.com/arzuisiktopbas/07-A_Yen_for_the_Future/blob/main/Images/Yen_Future_Settle_Prices.png)
 
 In the long term, It seems that the Japanese Yen  is strengthening against the Dollar. On the other hand, there are a lot of short-term ups and downs.
 
@@ -18,11 +18,11 @@ In the long term, It seems that the Japanese Yen  is strengthening against the D
 
 I used The Hodrick-Prescott Filter to decompose the "Settle" price into two seperate series: noise and trend. It seems that there's a lot of short term fluctuations that deviate around the trend.
 
-![SettlevsTrend](https://github.com/arzuisiktopbas/python-homework/blob/main/Homework%237/Images/Settle%20vs%20Trend.png)
+![SettlevsTrend](https://github.com/arzuisiktopbas/07-A_Yen_for_the_Future/blob/main/Images/Settle%20vs%20Trend.png)
 
 The Noise plot gave us a visualization of where the most noise is on this chart. These points can be correllated with volatile periods in the market.
 
-![Noise](https://github.com/arzuisiktopbas/python-homework/blob/main/Homework%237/Images/Noise.png)
+![Noise](https://github.com/arzuisiktopbas/07-A_Yen_for_the_Future/blob/main/Images/Noise.png)
 
 
 
@@ -32,9 +32,9 @@ I created an ARMA model and fit it to the returns data. Note. I set the AR and M
 
 In the summary table, the p-values for each lag are not statistically significant. The model is not a good fit given the p-value exceeds 0.05.
 
-![Arma](https://github.com/arzuisiktopbas/python-homework/blob/main/Homework%237/Images/ARMA_summary.png)
+![Arma](https://github.com/arzuisiktopbas/07-A_Yen_for_the_Future/blob/main/Images/ARMA_summary.png)
 
-![Arma](https://github.com/arzuisiktopbas/python-homework/blob/main/Homework%237/Images/Arma_Five_Days_Returns.png)
+![Arma](https://github.com/arzuisiktopbas/07-A_Yen_for_the_Future/blob/main/Images/Arma_Five_Days_Returns.png)
 
 ### 3. Forecasting the Settle Price using an ARIMA Model
 
@@ -44,11 +44,11 @@ I created an ARIMA model by using the "Settle" price data. For autoregressive (A
 
 Again, based on the summary table, the p-values for each lag did not show to be statistically significant - none are less than 0.05.
 
-![Arima](https://github.com/arzuisiktopbas/python-homework/blob/main/Homework%237/Images/ARIMA_summary.png)
+![Arima](https://github.com/arzuisiktopbas/07-A_Yen_for_the_Future/blob/main/Images/ARIMA_summary.png)
 
 Based on the ARIMA model, we can see that an increase in the Yen over the dollar is expected for the 5 day period.
 
-![Arima](https://github.com/arzuisiktopbas/python-homework/blob/main/Homework%237/Images/Arima_Five_Days_Returns.png)
+![Arima](https://github.com/arzuisiktopbas/07-A_Yen_for_the_Future/blob/main/Images/Arima_Five_Days_Returns.png)
 
 
 ### 4. Forecasting Volatility with GARCH
@@ -56,12 +56,12 @@ Based on the ARIMA model, we can see that an increase in the Yen over the dollar
 I created a Garch model and fit it to the returns data. Note. Similar to ARMA, I set the AR and MA ("p" and "q") parameters to p=2 and q=1: order=(2, 1)
 In the summary table,the p-values are greater than 0.05 and therefore statistically significant.
 
-![Garch](https://github.com/arzuisiktopbas/python-homework/blob/main/Homework%237/Images/GARCH_summary.png)
+![Garch](https://github.com/arzuisiktopbas/07-A_Yen_for_the_Future/blob/main/Images/GARCH_summary.png)
 
 
 Based on the GARCH forecast plot , volatility risk of the Yen will increase each day for the next 5 days.
 
-![Garch](https://github.com/arzuisiktopbas/python-homework/blob/main/Homework%237/Images/Garch_forecast.png)
+![Garch](https://github.com/arzuisiktopbas/07-A_Yen_for_the_Future/blob/main/Images/Garch_forecast.png)
 
 ## Conclusions
 
@@ -77,6 +77,6 @@ I build a Scikit-Learn linear regression model to predict Yen futures ("settle")
 
 The model has a root mean square error of **0.415%** on out-of-sample data and **0.5962%** on in-sample data. Hence, the model performs better with data that it has not worked with before.
 
-![Linear_reg](https://github.com/arzuisiktopbas/python-homework/blob/main/Homework%237/Images/Prediction_plot.png) 
+![Linear_reg](https://github.com/arzuisiktopbas/07-A_Yen_for_the_Future/blob/main/Images/Prediction_plot.png) 
 
 The In-Sample data and the Out of Sample results is highly deviant from each other.Because the root mean square error of **0.415%** on out-of-sample data is smaller than the root mean square error of **0.5962%** on in-sample data, it is considered that the model is **Overfitting.**
