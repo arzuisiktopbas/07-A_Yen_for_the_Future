@@ -1,11 +1,11 @@
-# Unit 10 — A Yen for the Future
+# A Yen for the Future
  *by Arzu Isik Topbas*
  
  <img src="https://image.freepik.com/free-photo/hand-holding-virtual-world-with-dollar-yuan-yen-euro-pound-sterling-sign-exchange-currency-concept_50039-1623.jpg" width="1000" height="400" />
 
 [image source:freepik](https://www.freepik.com/premium-photo/hand-holding-virtual-world-with-dollar-yuan-yen-euro-pound-sterling-sign-exchange-currency-concept_9148152.htm#page=1&query=currency&position=2)
 
-In this assignment, I tested the many time-series tools that I have learned in order to predict future movements in the value of the Japanese yen versus the U.S. dollar. I used two main models *Time Series Forecasting* and *Linear Regression Modeling*.
+I tested the many time-series tools that I have learned in order to predict future movements in the value of the Japanese yen versus the U.S. dollar. I used two main models *Time Series Forecasting* and *Linear Regression Modeling*.
 
 - - -
 
